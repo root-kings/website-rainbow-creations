@@ -10,6 +10,9 @@ router.get('/about', (req, res) => {
 	res.render('about')
 })
 
+router.get('/offerings', (req, res) => {
+	res.render('offerings')
+})
 
 // Controllers -----
 
