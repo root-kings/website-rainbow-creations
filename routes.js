@@ -14,6 +14,14 @@ router.get('/offerings', (req, res) => {
 	res.render('offerings')
 })
 
+router.get('/portfolio', (req, res) => {
+	res.render('portfolio')
+})
+
+router.get('/events', (req, res) => {
+	res.render('events')
+})
+
 router.get('/contact', (req, res) => {
 	res.render('contact')
 })
