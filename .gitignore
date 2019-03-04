@@ -64,3 +64,6 @@ typings/
 **/.directory
 **/._*
 **/.DS_Store
+
+# Temporary files
+temp
