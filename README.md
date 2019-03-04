@@ -6,10 +6,10 @@ A website for Rainbow Creations.
 
 ### Dev dependencies
 
-* `node`
-* `yarn`
-* `nodemon`
-* `gulp`
+- `node`
+- `yarn`
+- `nodemon`
+- `gulp`
 
 ### Development server
 
@@ -23,32 +23,33 @@ Build the assets by running `gulp`.
 
 ## To Do
 
-### Offerings. 
+### Offerings
 
-[ ] Personalized gifts 
-[ ] Mural 
-[ ] Canvas portraits 
-[ ] Canvas Landscape 
-[ ] Stands 
+[ ] Personalized gifts
+[ ] Mural
+[ ] Canvas portraits
+[ ] Canvas Landscape
+[ ] Stands
 [ ] Line drawings
 
+### Portfolio
 
-### Portfolio 
-
-[ ] details of projects. 
+[ ] details of projects.
 [ ] Name, name of owner, date, place, description, images
 
+### Events
 
-### Events. 
-
-[ ] Workshops 
-[ ] Personalized tutorials 
-[ ] Trainings 
+[ ] Workshops
+[ ] Personalized tutorials
+[ ] Trainings
 [ ] Certification exams
 
+### About us
 
-### About us 
 [ ] Testimonials
 
-### Contact  
+### Contact
+
 [ ] social info
+
+### Attributions
