@@ -3,7 +3,17 @@ extends components/layout.pug
 block styles
 
 block content
-    h3.center Hello
-
+    .screen-height.valign-wrapper
+        .full-width.center
+            img.circle(src="/images/yuna.jpg", alt="")
+            h3.teal-text.light.center Rainbow Creations
+            p
+                a.btn.btn-flat.teal.white-text(href="/offerings") Enter
+            p
+                a.teal-text.light(href="/offerings") offerings
+                |  | 
+                a.teal-text.light(href="/events") events
+                |  | 
+                a.teal-text.light(href="/portfolio") portfolio
 block scripts
-    
+    script(src="/js/init/splash.js")
