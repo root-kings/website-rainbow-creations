@@ -4,6 +4,8 @@
   "description": "a website for rainbow creations nagpur",
   "main": "index.js",
   "scripts": {
+    "build": "gulp",
+    "postinstall": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "concurrently --kill-others \"gulp dev\" \"nodemon -r dotenv/config index.js\""
