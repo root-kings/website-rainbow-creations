@@ -14,6 +14,10 @@ router.get('/offerings', (req, res) => {
 	res.render('offerings')
 })
 
+router.get('/contact', (req, res) => {
+	res.render('contact')
+})
+
 // Controllers -----
 
 module.exports = router
