@@ -6,8 +6,8 @@ router.get('/', (req, res) => {
 	res.render('index')
 })
 
-router.get('/about', (req, res) => {
-	res.render('about')
+router.get('/story', (req, res) => {
+	res.render('story')
 })
 
 router.get('/offerings', (req, res) => {
