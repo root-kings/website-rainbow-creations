@@ -3,7 +3,13 @@
 		margin-left: 15px;
 	}
 }
-
+nav {
+	.brand-logo {
+		img {
+			max-height: 56px;
+		}
+	}
+}
 .btn-bordered {
 	box-sizing: content-box;
 	border: 1px solid #aaaaaa90;
