@@ -53,12 +53,12 @@ span.tiny {
 
 	padding-left: 16px;
 
-	
-
-	img.portfolio-list-item {
+	.portfolio-list-item {
 		display: inline-block;
 
-		height: 300px;
+		img {
+			height: 300px;
+		}
 
 		margin: 16px;
 		margin-left: 0px;
