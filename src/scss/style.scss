@@ -4,7 +4,6 @@
 	}
 }
 
-
 .btn-bordered {
 	box-sizing: content-box;
 	border: 1px solid #aaaaaa90;
@@ -14,13 +13,9 @@ a.breadcrumb::before {
 	color: currentColor;
 }
 
-
-
 .sharp {
 	border-radius: 0px;
 }
-
-
 
 span.tiny {
 	font-size: 0.7em;
@@ -52,3 +47,25 @@ span.tiny {
 	/* Add a pointer on hover */
 }
 
+.portfolio-list {
+	overflow: auto;
+	white-space: nowrap;
+
+	padding-left: 16px;
+
+	
+
+	img.portfolio-list-item {
+		display: inline-block;
+
+		height: 300px;
+
+		margin: 16px;
+		margin-left: 0px;
+		display: inline-block;
+	}
+}
+
+.portfolio-list::-webkit-scrollbar {
+	width: 0px;
+}
