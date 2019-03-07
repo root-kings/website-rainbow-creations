@@ -3,6 +3,26 @@ extends components/layout.pug
 block styles
 
 block content
-    h3.center About
+    section
+        .row
+            .col.s12.m8
+                #herocarousel.carousel.carousel-slider
+                    a.carousel-item(href="#one!")
+                        img(src="https://lorempixel.com/800/400/food/1")
+                    a.carousel-item(href="#two!")
+                        img(src="https://lorempixel.com/800/400/food/2")
+                    a.carousel-item(href="#three!")
+                        img(src="https://lorempixel.com/800/400/food/3")
+                    a.carousel-item(href="#four!")
+                        img(src="https://lorempixel.com/800/400/food/4")
+                    a.carousel-item(href="#five!")
+                        img(src="https://lorempixel.com/800/400/food/5")
+
+            .col.s12.m4
+                h4.light.teal-text Story
+
+                p.flow-text.light Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
+    
 
 block scripts
+    script(src="/js/init/story.js")
