@@ -10,8 +10,12 @@ router.get('/story', (req, res) => {
 	res.render('story')
 })
 
-router.get('/offerings', (req, res) => {
-	res.render('offerings')
+router.get('/products', (req, res) => {
+	res.render('products')
+})
+
+router.get('/services', (req, res) => {
+	res.render('services')
 })
 
 router.get('/portfolio', (req, res) => {
