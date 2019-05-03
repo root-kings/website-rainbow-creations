@@ -29,6 +29,9 @@ router.get('/events', (req, res) => {
 router.get('/contact', (req, res) => {
 	res.render('contact')
 })
+router.get('/about', (req, res) => {
+	res.render('about')
+})
 
 // Controllers -----
 
