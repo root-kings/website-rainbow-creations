@@ -20,16 +20,24 @@ block content
 
     section
         div
-            h5.center-align Rainbow Creations
+            .center-align
+                font(size='8', face='verdana', color='green') Rainbow Creations
+                    br
+                    a.waves-effect.waves-light.btn-large 
+                        | Enter
+
+        section
+            div
                 br
                 br
-                a.waves-effect.waves-light.btn-large 
-                    | Enter
+                br
+                br
+                br
 
 
     section
         .row
-            .col.s12.m4
+            .col.s12.m6
                 .card
                     .card-image.waves-effect.waves-block.waves-light
                         img.activator(src='images/canvas-painting/04.png')
@@ -46,7 +54,7 @@ block content
                         p
                             | To View More Please Check our GDrive.
             
-            .col.s12.m4
+            .col.s12.m6
                 .card
                     .card-image.waves-effect.waves-block.waves-light
                         img.activator(src='images/canvas-painting/05.png')
@@ -63,24 +71,6 @@ block content
                         p
                             | To View More Please Check our GDrive.
 
-            .col.s12.m4
-                .card
-                    .card-image.waves-effect.waves-block.waves-light
-                        img.activator(src='images/canvas-painting/01.png')
-                    .card-content
-                        span.card-title.activator.grey-text.text-darken-4
-                            | Meurals
-                            i.material-icons.right more_vert
-                        p
-                            a(href='#') View More
-                    .card-reveal
-                        span.card-title.grey-text.text-darken-4
-                            | Meurals
-                            i.material-icons.right close
-                        p
-                            | To View More Please Check our GDrive.
-
-            
 
 block scripts
     script(src="/js/init/story.js")
