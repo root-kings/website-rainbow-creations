@@ -6,8 +6,8 @@ router.get('/', (req, res) => {
 	res.render('index')
 })
 
-router.get('/story', (req, res) => {
-	res.render('story')
+router.get('/splash', (req, res) => {
+	res.render('splash')
 })
 
 router.get('/products', (req, res) => {
@@ -29,9 +29,7 @@ router.get('/events', (req, res) => {
 router.get('/contact', (req, res) => {
 	res.render('contact')
 })
-router.get('/about', (req, res) => {
-	res.render('about')
-})
+
 
 // Controllers -----
 

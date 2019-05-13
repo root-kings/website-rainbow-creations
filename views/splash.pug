@@ -1,0 +1,19 @@
+extends components/layout.pug
+
+block styles
+
+block content
+    .screen-height.valign-wrapper
+        .full-width.center
+            img.circle(src="/images/logo-rainbow.png", alt="")
+            h3.brown-text.light.center Rainbow Creations
+            p
+                a.btn.btn-flat.brown.white-text(href="/story") Enter
+            p
+                a.brown-text.light(href="/offerings") offerings
+                |  | 
+                a.brown-text.light(href="/events") events
+                |  | 
+                a.brown-text.light(href="/portfolio") portfolio
+block scripts
+    script(src="/js/init/splash.js")
