@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 	M.AutoInit()
+
+	M.Dropdown.init(document.querySelectorAll('.dropdown-trigger'), { hover: true, constrainWidth: false, coverTrigger: false })
 })
 
 function hasClass(el, className) {
