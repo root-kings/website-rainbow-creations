@@ -3,14 +3,41 @@ extends components/layout.pug
 block styles
 
 block content
-    h3.center Events
-          style.
-            body
-            {
-            background:url('https://s-media-cache-ak0.pinimg.com/736x/f4/ac/6a/f4ac6aac3afb587f6cae04155656fca3.jpg');
-            }
-            
-    
+
+	section
+		//- .parallax-container
+			.parallax
+				img.dark(src="/images/wall-art/02.jpg")
+			.container
+				h1.light.center.white-text Events
+
+		h1.light.center.brown-text Events
+		
+
+	section.container
+		ul.collapsible
+			li
+				.collapsible-header
+					i.material-icons filter_drama
+					| First
+				.collapsible-body
+					span Lorem ipsum dolor sit amet.
+			li
+				.collapsible-header
+					i.material-icons place
+					| Second
+				.collapsible-body
+					span Lorem ipsum dolor sit amet.
+			li
+				.collapsible-header
+					i.material-icons whatshot
+					| Third
+				.collapsible-body
+					span Lorem ipsum dolor sit amet.
+
+
+
+
 
 
 block scripts
