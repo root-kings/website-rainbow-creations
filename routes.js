@@ -30,6 +30,13 @@ router.get('/contact', (req, res) => {
 	res.render('contact')
 })
 
+router.get('/dashboard', (req, res) => {
+	res.render('dashboard')
+})
+
+router.get('/login', (req, res) => {
+	res.render('login')
+})
 
 // Controllers -----
 
