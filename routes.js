@@ -22,6 +22,10 @@ router.get('/portfolio', (req, res) => {
 	res.render('portfolio')
 })
 
+router.get('/artwork', (req, res) => {
+	res.render('artwork')
+})
+
 router.get('/events', (req, res) => {
 	res.render('events')
 })

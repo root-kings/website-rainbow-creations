@@ -1,12 +1,12 @@
-ul#portfolio-dropdown.dropdown-content
+ul#artwork-dropdown.dropdown-content
     li
-        a.brown-text(href="/portfolio#wall-art") Wall Art
+        a.brown-text(href="/artwork#wall-art") Wall Art
     li
-        a.brown-text(href="/portfolio#canvas-painting") Canvas Paintings
+        a.brown-text(href="/artwork#canvas-painting") Canvas Paintings
     li
-        a.brown-text(href="/portfolio#illustration") Illustrations
+        a.brown-text(href="/artwork#illustration") Illustrations
     li
-        a.brown-text(href="/portfolio#line-art") Line Art
+        a.brown-text(href="/artwork#line-art") Line Art
 
 .navbar-fixed
     //- nav.white.z-depth-0
@@ -21,13 +21,15 @@ ul#portfolio-dropdown.dropdown-content
                 li
                     a.brown-text(href="/") Story
 
-                //- li
-                    a.brown-text(href="/portfolio") Portfolio
+               
 
                 li
-                    a.dropdown-trigger.brown-text(href="/portfolio", data-target="portfolio-dropdown") Portfolio
+                    a.dropdown-trigger.brown-text(href="/artwork", data-target="artwork-dropdown") Artwork
                         i.material-icons.right arrow_drop_down
-
+                
+                li
+                    a.brown-text(href="/portfolio") Portfolio
+                
                 li
                     a.brown-text(href="/products") Products
 
