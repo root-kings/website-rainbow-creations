@@ -4,32 +4,13 @@ block styles
 
 block content
     section
-        //- h4.light.brown-text.center Story
-        //- .row
-            #herocarousel.carousel.carousel-slider
-                a.carousel-item(href="#one!")
-                    img(src="/images/wall-art/01.jpg")
-                a.carousel-item(href="#two!")
-                    img(src="/images/canvas-painting/02.png")
-                a.carousel-item(href="#four!")
-                    img(src="/images/canvas-painting/04.png")
-                a.carousel-item(href="#five!")
-                    img(src="/images/wall-art/05.jpg")
-
-        //- section
-            div
-                .center-align
-                    font(size='8', face='verdana', color='green') Rainbow Creations
-                        br
-                        a.waves-effect.waves-light.btn-large 
-                            | Enter
-
         .parallax-container.valign-wrapper
-            .parallax
-                img.dark(src="/images/wall-art/01.jpg")
+            .parallax#particles
+                img.dark.hide(src="/images/wall-art/01.jpg")
+                
             .container.center
                 img(src="/images/logo-rainbow.png", alt="")
-                h1.light.center.white-text Rainbow Creations
+                //- h1.light.center Rainbow Creations
         
         
     section.container
@@ -90,4 +71,5 @@ block content
 
 
 block scripts
+    script(src="/js/lib/particles.min.js")
     script(src="/js/init/story.js")
