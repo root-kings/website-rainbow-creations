@@ -3,6 +3,7 @@ const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const logger = require('morgan')
+const favicon = require('serve-favicon');
 
 const PORT = process.env.PORT || 3000
 // const DBPORT = process.env.MONGODB_URI
@@ -30,6 +31,8 @@ app.use(express.static('build'))
 
 app.set('view engine', 'pug')
 app.set('views', './views')
+
+app.use(favicon('./public/favicon.ico'));
 
 app.use('/', require('./routes'))
 
