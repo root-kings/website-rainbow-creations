@@ -1,11 +1,63 @@
 extends components/layout.pug
 
 block styles
-
+    link(href='/css/lib/gallery-materialize.css', rel='stylesheet')
+    link(href='/css/lib/gallery.css', rel='stylesheet')
 
 block content
     h4.center Portfolio
     
+    #portfolio.section.gray
+        .gallery.row
+
+            each project in projects
+                .col.l4.m6.s12.gallery-item.gallery-expand(style="position: absolute; left: 0px; top: 0px;")
+                    .placeholder
+                        .gallery-curve-wrapper
+                            a.gallery-cover.gray
+                                img.responsive-img(src=project.images[0], alt='project')
+                            .gallery-header(style="margin-top: 170px; padding: 20px; min-height: 480px; display: none;")
+                                span #{project.name}
+                            .gallery-body
+                                .title-wrapper
+                                    h3 #{project.name}
+                                
+                                h4 Owner: #{project.owner}
+
+                                p.description Project cost: #{project.cost}
+                                p.description Finished: #{project.date}
+                                
+                                p.description #{project.description}
+
+                                
+
+                                .carousel-wrapper
+                                    .carousel
+                                        //- a.carousel-item(href='#one!')	
+                                        each image in project.images
+                                            a.carousel-item(href=image, target="_blank")
+                                                img.bordered-sassy(src=image)
+
+                                .section.center
+                                    iframe.full-width(height="400px" src=project.youtubeUrl)
+
+
+                            .gallery-action
+                                a.btn-floating.btn-large.waves-effect.waves-light(href=project.projectUrl, target="_blank")
+                                    i.material-icons forward
+
+            else
+                p.col.s12.center There are no projects.
+
 
 
 block scripts
+
+    script(src='/js/lib/materialize-old.js')
+
+    script(src='/js/lib/imagesloaded.pkgd.min.js')
+    script(src='/js/lib/masonry.pkgd.min.js')
+    script(src='/js/lib/color-thief.min.js')
+    script(src='/js/lib/galleryExpand.js')
+
+    script(src='/js/init/gallery.js')
