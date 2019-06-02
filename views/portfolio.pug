@@ -5,7 +5,13 @@ block styles
     link(href='/css/lib/gallery.css', rel='stylesheet')
 
 block content
-    h4.center Portfolio
+
+    section
+        .parallax-container.valign-wrapper(style="height:300px")
+            .parallax
+                img.dark(src="/images/wall-art/04.jpg")
+            .container.center
+                h3.center.white-text Portfolio
     
     #portfolio.section.gray
         .gallery.row
@@ -149,6 +155,7 @@ block content
 
 block scripts
 
+    script(src='/js/lib/jquery.min.js')
     script(src='/js/lib/materialize-old.js')
 
     script(src='/js/lib/imagesloaded.pkgd.min.js')
