@@ -4,16 +4,19 @@ block styles
 
 block content
     section
-        .parallax-container.valign-wrapper
-            .parallax#particles
+        .parallax-container.valign-wrapper(style="height:90vh")
+            .parallax
                 img.dark.hide(src="/images/wall-art/01.jpg")
                 
             .container.center
-                img(src="/images/logo-rainbow.png", alt="")
-                //- h1.light.center Rainbow Creations
+                img(src="/images/205.png", alt="", height="450px")
+                h5.strong.center Wall Art(Murals) | Canvas Paintings | Illustrations | Line Drawings | Personalized Gifts
+                p.center
+                    i.material-icons.padded-top-compact.animated.infinite.slideOutDown.delay-2s keyboard_arrow_down
+                 
+    .divider.brown.lighten-4    
         
-        
-    section.container
+    section.container#story.padded-top-comfortable.padded-bottom-cozy
         h2.center.light.brown-text Story
 
         p.center.flow-text.light Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text.
@@ -29,51 +32,59 @@ block content
          
     
 
-    section.container
+    section.container.padded-top-cozy.padded-bottom-cozy
 
-        h2.center.light.brown-text Offerings
+        h2.center.light.brown-text.margined-bottom-comfortable Artworks
 
         .row       
             .col.s12.m6.l4
-                a(href="/portfolio#wall-art")
-                    .card
+                a(href="/artwork#wall-art")
+                    .card.z-depth-5.hoverable
                         .card-image.waves-effect.waves-block.waves-light
                             img(src='/images/wall-art/04.jpg')
                         .card-content
                             span.card-title.brown-text.text-darken-4 Wall Art
                         
             .col.s12.m6.l4
-                a(href="/portfolio#canvas-painting")
-                    .card
+                a(href="/artwork#canvas-painting")
+                    .card.z-depth-5.hoverable
                         .card-image.waves-effect.waves-block.waves-light
                             img(src='/images/canvas-painting/05.png')
                         .card-content
                             span.card-title.brown-text.text-darken-4 Canvas Paintings
             
             .col.s12.m6.l4
-                a(href="/portfolio#canvas-painting")
-                    .card
-                        .card-image.waves-effect.waves-block.waves-light
-                            img(src='/images/canvas-painting/05.png')
-                        .card-content
-                            span.card-title.brown-text.text-darken-4 Canvas Paintings
-            
-            <br>
-            .col.s12.m6.l4.offset-l2
-                a(href="/portfolio#canvas-painting")
-                    .card
+                a(href="/artwork#illustration")
+                    .card.z-depth-5.hoverable
                         .card-image.waves-effect.waves-block.waves-light
                             img(src='/images/canvas-painting/05.png')
                         .card-content
                             span.card-title.brown-text.text-darken-4 Illustrations
             
+        
             .col.s12.m6.l4
-                a(href="/portfolio#canvas-painting")
-                    .card
+                a(href="/artwork#line-drawing")
+                    .card.z-depth-5.hoverable
                         .card-image.waves-effect.waves-block.waves-light
                             img(src='/images/canvas-painting/05.png')
                         .card-content
-                            span.card-title.brown-text.text-darken-4 Line Art
+                            span.card-title.brown-text.text-darken-4 Line Drawings
+            
+            .col.s12.m6.l4
+                a(href="/artwork#gift")
+                    .card.z-depth-5.hoverable
+                        .card-image.waves-effect.waves-block.waves-light
+                            img(src='/images/canvas-painting/05.png')
+                        .card-content
+                            span.card-title.brown-text.text-darken-4 Personalized Gifts
+            
+            .col.s12.m6.l4
+                a(href="/contact")
+                    .card.z-depth-5.hoverable
+                        .card-image.waves-effect.waves-block.waves-light
+                            img(src='/images/canvas-painting/05.png')
+                        .card-content
+                            span.card-title.brown-text.text-darken-4 Contact Us
 
     section
         .parallax-container.valign-wrapper
@@ -84,7 +95,7 @@ block content
 
                 
                         
-    section.container
+    //- section.container.padded-top-cozy.padded-bottom-cozy
         h2.center.light.brown-text Testimonials
 
 
