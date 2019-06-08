@@ -34,6 +34,10 @@ router.get('/testimonials', (req, res) => {
 	res.render('testimonials')
 })
 
+router.get('/inthemedia', (req, res) => {
+	res.render('inthemedia')
+})
+
 router.get('/contact', (req, res) => {
 	res.render('contact')
 })
