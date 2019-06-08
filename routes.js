@@ -30,6 +30,10 @@ router.get('/events', (req, res) => {
 	res.render('events')
 })
 
+router.get('/testimonials', (req, res) => {
+	res.render('testimonials')
+})
+
 router.get('/contact', (req, res) => {
 	res.render('contact')
 })
