@@ -6,12 +6,14 @@ block styles
 
 block content
 
-    section
+    //- section
         .parallax-container.valign-wrapper(style="height:300px")
             .parallax
                 img.dark(src="/images/wall-art/04.jpg")
             .container.center
                 h3.center.white-text Portfolio
+    section.section
+        h3.light.brown-text.center Portfolio
     
     #portfolio.section.gray
         .gallery.row
@@ -22,7 +24,7 @@ block content
                         .gallery-curve-wrapper
                             a.gallery-cover.gray
                                 img.responsive-img(src=project.images[0], alt='project')
-                            .gallery-header(style="margin-top: 170px; padding: 20px; min-height: 480px; display: none;")
+                            .gallery-header
                                 span #{project.name}
                             .gallery-body
                                 .title-wrapper
