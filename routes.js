@@ -43,11 +43,17 @@ router.get('/contact', (req, res) => {
 })
 
 router.get('/dashboard', (req, res) => {
-	res.render('dashboard')
+	if (req.session.loggedIn == 'rainbow') return res.render('dashboard')
+	return res.redirect('/login')
 })
 
 router.get('/login', (req, res) => {
 	res.render('login')
+})
+
+router.post('/login', (req, res) => {
+	if (req.body.username == 'rainbow' && req.body.password == 'rainbow') req.session.loggedIn = 'rainbow'
+	res.redirect('dashboard')
 })
 
 // Controllers -----

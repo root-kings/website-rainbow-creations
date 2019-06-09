@@ -6,10 +6,29 @@ block content
     section.full-height.valign-wrapper
         
         .container
-            .row
-                .col.s12.m6.l4.offset-m3.offset-l4
-                    .card-panel
-                        h4.light.center.brown-text Login
+                .row
+                    .col.s12.m8.push-m2.l4.push-l4
+                        .card.z-depth-2
+                            .card-image.waves-effect.waves-block.waves-light
+                                //- img.activator(src='/images/login.jpg', alt='background image')
+                                img(src='/images/office.jpg', alt='background image')
+
+                            .card-content
+                                span.card-title.brown-text.text-darken-4 Log in
+                                    //- i.material-icons.right close
+
+                                form#login-form(method='post', action='/login')
+                                    .row
+                                        .input-field.col.s12
+                                            input#username.validate(type='text', name='username')
+                                            label(for='username') Username
+                                        .input-field.col.s12
+                                            input#password.validate(type='password', name='password')
+                                            label(for='password') Password
+                                        .col.s12
+                                            button.btn.right.waves-effect.waves-light(type='submit') Log in
+                                            a(href='#') Forgot password?
+
 
         
 
