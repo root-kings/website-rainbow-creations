@@ -25,31 +25,31 @@ Build the assets by running `gulp`.
 
 ### Offerings
 
-[ ] Personalized gifts
-[ ] Mural
-[ ] Canvas portraits
-[ ] Canvas Landscape
-[ ] Stands
-[ ] Line drawings
+[x] Personalized gifts
+[x] Mural
+[x] Canvas portraits
+[x] Canvas Landscape
+[x] Stands
+[x] Line drawings
 
 ### Portfolio
 
-[ ] details of projects.
-[ ] Name, name of owner, date, place, description, images
+[x] details of projects.
+[x] Name, name of owner, date, place, description, images
 
 ### Events
 
-[ ] Workshops
-[ ] Personalized tutorials
-[ ] Trainings
-[ ] Certification exams
+[-] Workshops
+[-] Personalized tutorials
+[-] Trainings
+[-] Certification exams
 
 ### About us
 
-[ ] Testimonials
+[x] Testimonials
 
 ### Contact
 
-[ ] social info
+[x] social info
 
 ### Attributions
