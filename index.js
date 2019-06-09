@@ -4,9 +4,12 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const logger = require('morgan')
 const favicon = require('serve-favicon');
+const session = require('express-session')
 
 const PORT = process.env.PORT || 3000
 const DBPORT = process.env.MONGODB_URI
+const SESSIONSECRET = process.env.SESSIONSECRET
+
 
 let app = express()
 
@@ -25,6 +28,8 @@ app.use(
 	})
 )
 app.use(bodyParser.json())
+
+app.use(session({ secret: SESSIONSECRET, resave: true, saveUninitialized: true, cookie: { maxAge: 24 * 60 * 60 * 1000 } }))
 
 app.use(express.static('public'))
 app.use(express.static('build'))
