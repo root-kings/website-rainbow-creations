@@ -48,7 +48,7 @@ router.post('/contact', (req, res) => {
 	
 	let contactinfo = req.body
 	let email = {
-		to: 'contact@rainbow-creations.com',
+		to: 'mailing.rainbowcreations@gmail.com',
 		from: `Rainbow Contact Response <rainbow@root-kings.com>`, //
 		subject: `Enquiry: ${contactinfo.subject} `,
 		html: `<p>Body: ${contactinfo.message}. \
