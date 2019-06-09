@@ -50,7 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
 				})
 					.then(function(response) {
 						M.toast({ html: 'Project details sent!' })
-						$('#edit-modal').modal('close')
+						M.Modal.getInstance(document.querySelector('#edit-modal'))
+							.close()
+							.destroy()
 						projectsVue.poplateProjects()
 
 						// TODO: redirect to success page
@@ -67,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		mounted: function() {
 			this.poplateProjects()
-			M.AutoInit()
+			// M.AutoInit()
 			// hideWait()
 		}
 	})
@@ -77,52 +79,48 @@ document.addEventListener('DOMContentLoaded', function() {
 	}) */
 })
 
-function deleteproject(id) {
-	if (confirm('Are you sure you want to delete?')) {
-		$.post('/project/' + id + '/delete', {}, function(status) {
-			if (status) {
-				window.location.reload()
-			}
-		})
+function deleteproject() {
+	if (projectsVue.selectedProject._id != '' || projectsVue.selectedProject._id != undefined) {
+		if (confirm('Are you sure you want to delete?')) {
+			fetch('/project/' + projectsVue.selectedProject._id + '/delete', {
+				method: 'POST'
+			})
+				.then(response => response.json())
+				.then(status => {
+					if (status) {
+						projectsVue.poplateProjects()
+						clearproject()
+						M.Modal.getInstance(document.querySelector('#edit-modal'))
+							.close()
+							.destroy()
+					}
+				})
+				.catch(function(error) {
+					M.toast({ html: 'Error occured! Check console for details.' })
+					console.error(error)
+				})
+		}
 	}
 }
 
 function populate(id) {
-	$.get('/project/' + id, {}, function(project) {
-		projectsVue.selectedProject = project
-		/*M.toast({
-            html: 'Product Found ' + product.name
-        });*/
-		$('#edit-modal').modal('open')
-		$('#modal-heading').html('Edit project')
+	fetch('/project/' + id)
+		.then(response => response.json())
+		.then(function(project) {
+			projectsVue.selectedProject = project
 
-		// $('#project-description')
-		// 	// .val(project.description)
-		// 	.focus()
-		// $('#project-cost')
-		// 	// .val(project.cost)
-		// 	.focus()
-		// $('#project-owner')
-		// 	// .val(project.owner)
-		// 	.focus()
-		// $('#project-url')
-		// 	// .val(project.url)
-		// 	.focus()
-		// $('#project-name')
-		// 	// .val(project.name)
-		// 	.focus()
+			M.Modal.init(document.querySelector('#edit-modal')).open()
 
-		// $('#project-form').attr('action', '/project/' + id + '/update')
-		projectsVue.requestURL = '/project/' + id + '/update'
-		$('#delete-btn').attr('href', 'javascript:deleteproject("' + id + '");')
+			document.querySelector('#modal-heading').innerHTML = 'Edit project'
 
-		//console.log(product._id)
-	})
+			projectsVue.requestURL = '/project/' + id + '/update'
+		})
 }
 
 function clearproject() {
-	$('#edit-modal').modal('open')
-	$('#modal-heading').html('Create project')
+	M.Modal.init(document.querySelector('#edit-modal')).open()
+
+	document.querySelector('#modal-heading').innerHTML = 'Create project'
 
 	projectsVue.selectedProject = {
 		description: '',
@@ -136,29 +134,7 @@ function clearproject() {
 		images: []
 	}
 
-	// $('#project-description')
-	// 	// .val('')
-	// 	.focus()
-	// // $('#project-image')
-	// // .val('')
-	// // 	.focus()
-	// $('#project-cost')
-	// 	// .val('')
-	// 	.focus()
-	// $('#project-owner')
-	// 	// .val('')
-	// 	.focus()
-	// $('#project-url')
-	// 	// .val('')
-	// 	.focus()
-	// $('#project-name')
-	// 	// .val('')
-	// 	.focus()
-
-	// $('#project-form').attr('action', '/project/create')
 	projectsVue.requestURL = '/project/create'
-
-	$('#delete-btn').attr('href', '!#')
 }
 
 const uploadFile = function(file, signedRequest, url) {
