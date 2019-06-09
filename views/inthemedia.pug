@@ -3,21 +3,39 @@ extends components/layout.pug
 block styles
 
 
+mixin newsItem(newstitle, publisher, file)
+    .row
+        .col.s12
+            a(href=file)
+                .card-panel.rounded.hoverable
+                    h4.light.brown-text= newstitle
+                    h5= publisher
+
 block content
-    
+
 
     section.section
         h3.light.brown-text.center In the media
 
         .container
-            .row
-                .col.s12
-                    a(href="/documents/file.pdf")
-                        .card-panel.rounded.hoverable
-                            h4.light.brown-text Headline Headline
-                            h5 Newspaper
+            h5.light.center 2017
 
-            
+            +newsItem("Artist Priyanka Wankhede painting Transforming Ajni Railway Station","Loksatta","/media-coverage/2017/Artist Priyanka Wankhede painting  Transforming Ajni Railway Station _ _ Loksatta.pdf")
+
+            +newsItem("City artist transforms Ajni rly station into bright art gallery","The Hitavada","/media-coverage/2017/City artist transforms Ajni rly station into bright art gallery.pdf")
+
+            +newsItem("Nagpur Artist Is Transforming Ajni Station Into A Beautiful Canvas!","Reacho","/media-coverage/2017/Nagpur Artist Is Transforming Ajni Station Into A Beautiful Canvas! - Reacho.pdf")
+
+            +newsItem("Priyanka Wankhede Beautification drives are good, but what about maintenance, ask city artists","Nagpur News - Times of India","/media-coverage/2017/Priyanka Wankhede_ Beautification drives are good, but what about maintenance, ask city artists _ Nagpur News - Times of India.pdf")
+
+            h5.light.center 2019
+
+            +newsItem("कोमल कंपनियों की खुशनुमा दुनिया","Dainik Bhaskar","/media-coverage/2019/Dainik Bhaskar_1.pdf")
+
+            +newsItem("रंग बिरंगी पेंटिंगसे खिल उठा अजनी स्टेशन","Lokmat Samachar","/media-coverage/2019/Lokmat Samachar_1.pdf")
+
+            +newsItem("अनदेखी से मिट गयी तस्वीर","Lokmat Samachar","/media-coverage/2019/Lokmat Samachar_2.pdf")
+
 
 
 block scripts
