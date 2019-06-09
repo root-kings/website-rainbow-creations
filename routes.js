@@ -1,6 +1,7 @@
-/* eslint-disable new-cap */
-/* eslint-disable capitalized-comments */
 let router = require('express').Router()
+
+const sgMail = require('@sendgrid/mail')
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 router.get('/', (req, res) => {
 	res.render('index')
@@ -40,6 +41,25 @@ router.get('/inthemedia', (req, res) => {
 
 router.get('/contact', (req, res) => {
 	res.render('contact')
+})
+
+router.post('/contact', (req, res) => {
+	// console.log(req.body)
+	
+	let contactinfo = req.body
+	let email = {
+		to: 'contact@rainbow-creations.com',
+		from: `Rainbow Contact Response <rainbow@root-kings.com>`, //
+		subject: `Enquiry: ${contactinfo.subject} `,
+		html: `<p>Body: ${contactinfo.message}. \
+					<br> \
+					<br>From: ${contactinfo.firstname} ${contactinfo.lastname}  \
+					<br>Email: ${contactinfo.email} \
+					<br>Phone: ${contactinfo.phone} </p>`
+	}
+
+	sgMail.send(email)
+	res.render('contact', { submitted: true })
 })
 
 router.get('/dashboard', (req, res) => {

@@ -13,30 +13,36 @@ block content
                     img.full-width(src="/images/office.jpg", alt="")
             .col.s12.m6
                 .padded-compact
-                    form#contactform.row(action="#!")
-                        .col.s12
-                            h4.light.brown-text.center Get in touch
-                        .input-field.col.s6
-                            input#firstname(type="text" name="firstname")
-                            label(for="firstname") First Name
-                        .input-field.col.s6
-                            input#latname(type="text" name="lastname")
-                            label(for="lastname") Last Name
-                        .input-field.col.s6
-                            input#email(type="email" name="email")
-                            label(for="email") Email
-                        .input-field.col.s6
-                            input#phone(type="text" name="phone")
-                            label(for="phone") Phone
-                        .input-field.col.s12
-                            input#subject(type="text" name="subject")
-                            label(for="subject") Subject
-                        .input-field.col.s12
-                            textarea#message.materialize-textarea(name="message")
-                            label(for="message") Message
-                        .col.s12
-                            a.btn(href="#") Submit
-                                i.material-icons.right send
+                    if submitted
+                        br
+                        br
+                        br
+                        h5.light.center Thank you for contacting us! We'll get in touch with you soon!
+                    else
+                        form#contactform.row(action="contact", method='post')
+                            .col.s12
+                                h4.light.brown-text.center Get in touch
+                            .input-field.col.s6
+                                input#firstname(type="text" name="firstname")
+                                label(for="firstname") First Name
+                            .input-field.col.s6
+                                input#latname(type="text" name="lastname")
+                                label(for="lastname") Last Name
+                            .input-field.col.s6
+                                input#email(type="email" name="email")
+                                label(for="email") Email
+                            .input-field.col.s6
+                                input#phone(type="text" name="phone")
+                                label(for="phone") Phone
+                            .input-field.col.s12
+                                input#subject(type="text" name="subject")
+                                label(for="subject") Subject
+                            .input-field.col.s12
+                                textarea#message.materialize-textarea(name="message")
+                                label(for="message") Message
+                            .col.s12
+                                a.btn(href="javascript:document.getElementById('contactform').submit()") Submit
+                                    i.material-icons.right send
     
     .divider
 
