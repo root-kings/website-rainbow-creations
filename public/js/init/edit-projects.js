@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
 				name: '',
 				date: '',
 				projectUrl: '',
-				youtubeUrl: '',
+				youtubeUrl: '',				
+				type: '',
 				images: []
 			},
 			requestURL: '/project/create'
@@ -111,6 +112,8 @@ function populate(id) {
 
 			M.Modal.init(document.querySelector('#edit-modal')).open()
 
+			M.updateTextFields()
+
 			document.querySelector('#modal-heading').innerHTML = 'Edit project'
 
 			projectsVue.requestURL = '/project/' + id + '/update'
@@ -130,7 +133,8 @@ function clearproject() {
 		name: '',
 		date: '',
 		projectUrl: '',
-		youtubeUrl: '',
+		youtubeUrl: '',		
+		type: '',
 		images: []
 	}
 
