@@ -11,12 +11,15 @@ var Project = require('../models/project')
 
 // Display list of all Projects.
 exports.project_list = function(req, res) {
-	Project.find({}).exec(function(err, list_projects) {
+	Project.find({ type: req.params.type }).exec(function(err, list_projects) {
 		if (err) {
 			throw err
 		}
+
+		console.log(list_projects)
 		//Successful, so render
-		res.render('portfolio', {
+		res.render('artwork', {
+			artworktype: req.params.type.split('-').join(' '),
 			projects: list_projects
 		})
 		//res.send(list_projects);
@@ -25,7 +28,7 @@ exports.project_list = function(req, res) {
 }
 
 exports.project_edit = function(req, res) {
-	res.render('edit-projects' )
+	res.render('edit-projects')
 }
 
 exports.project_list_api = function(req, res) {
@@ -43,9 +46,8 @@ exports.project_detail = function(req, res) {
 		if (err) {
 			throw err
 		}
-		
+
 		res.send(project)
-		
 	})
 }
 
@@ -54,12 +56,11 @@ exports.project_create_post = function(req, res) {
 	// Create a Book object with escaped and trimmed data.
 	var project = new Project(req.body)
 
-	
 	project.save(function(err) {
 		if (err) {
 			throw err
 		}
-		
+
 		res.send(project)
 	})
 }
