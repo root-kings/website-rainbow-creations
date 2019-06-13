@@ -23,9 +23,9 @@ router.get('/services', (req, res) => {
 // 	res.render('portfolio')
 // })
 
-router.get('/artwork', (req, res) => {
-	res.render('artwork')
-})
+// router.get('/artwork', (req, res) => {
+// 	res.render('artwork')
+// })
 
 router.get('/events', (req, res) => {
 	res.render('events')
@@ -98,9 +98,9 @@ router.post('/project/:id/update', project_controller.project_update_post)
 router.get('/project/:id', project_controller.project_detail)
 
 // GET request for list of all project.
-router.get('/dashboard/projects', project_controller.project_edit)
+// router.get('/dashboard/projects', project_controller.project_edit)
 
-router.get('/portfolio', project_controller.project_list)
+router.get('/artwork/:type', project_controller.project_list)
 
 // GET request for one project image.
 router.get('/project/image/:id', project_controller.project_image_get)
