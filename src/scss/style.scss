@@ -96,3 +96,14 @@ span.tiny {
 .arial-narrow {
   font-family: 'Arial Narrow', 'Roboto', sans-serif;
 }
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/edo.ttf) format('ttf');
+}
+
+.edo {
+  font-family: 'Edo', 'Roboto', sans-serif;
+}
