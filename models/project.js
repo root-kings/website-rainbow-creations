@@ -40,12 +40,11 @@ var ProjectSchema = new Schema({
 		type: String,
 		default: ''
 	},
-	categories: [
-		{
-			type: String,
-			max: 100
-		}
-	],
+	type: {
+		type: String,
+		max: 100,
+		enum: ['wall-art', 'canvas-painting', 'illustration', 'line-art', 'gift']
+	},
 	images: [
 		{
 			type: String
