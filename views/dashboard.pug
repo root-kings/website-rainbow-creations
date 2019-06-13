@@ -67,7 +67,7 @@ block content
                             label(for='project-cost') Date
 
                         .input-field.col.s12
-                            input#project-description(type='text', v-model="selectedProject.description", name='project_description')
+                            textarea.materialize-textarea#project-description(v-model="selectedProject.description", name='project_description')
                             label(for='project-description') Description
 
                         //- .input-field.col.s12
@@ -83,6 +83,17 @@ block content
                             //- i.material-icons.prefix link
                             input#project-video-url(type='text', name='project_video_url',v-model="selectedProject.youtubeUrl",)
                             label(for='project-video-url') Youtube Video Link
+                        
+                        .col.s6
+                            //- i.material-icons.prefix link
+                            label Type
+                            select#project-type.browser-default( name='project_type',v-model="selectedProject.type",)
+                                option(value="wall-art") Wall Art
+                                option(value="canvas-painting") Canvas Paintings
+                                option(value="illustration") Illustrations
+                                option(value="line-art") Line Art
+                                option(value="gift") Personalized Gifts
+
 
                         .file-field.input-field.col.s12
                             .btn
