@@ -84,11 +84,12 @@ exports.project_delete_post = function(req, res) {
 		s3.deleteObjects(params, function(err, data) {
 			// console.log(data)
 
-			if (err) return res.status(500).send(error)
-			Project.findByIdAndRemove(req.params.id, function(err) {
-				if (err) return res.status(500).send(error)
-				return res.send(true)
-			})
+			if (err) return res.status(500).send(err)
+		})
+
+		Project.findByIdAndRemove(req.params.id, function(err) {
+			if (err) return res.status(500).send(err)
+			return res.send(true)
 		})
 	})
 
