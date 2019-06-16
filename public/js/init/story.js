@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 	// particlesJS.load('particles', '/js/init/particles.json')
-
+	sliderheight = window.innerWidth < 650 ? 500 : 400
 	M.Slider.init(document.querySelectorAll('.slider'), {
-		// height: 600
+		height: sliderheight
 	})
 
 	// Masonry Grid
@@ -19,5 +19,4 @@ document.addEventListener('DOMContentLoaded', function() {
 	$masonry.imagesLoaded(function() {
 		$masonry.masonry('layout')
 	})
-	
 })
