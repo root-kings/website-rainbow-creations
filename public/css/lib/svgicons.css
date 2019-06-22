@@ -10,7 +10,7 @@ SVG Icons - svgicons.sparkk.fr
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  fill: #ffffff;
+  fill: #000000;
 }
 
 .svg-icon circle {
