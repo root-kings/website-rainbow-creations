@@ -146,9 +146,17 @@ main {
 
 
 img.dark {
-    filter: brightness(60%) saturate(150%);
+    filter: brightness(60%) saturate(110%);
 }
 
+
+.card img.dark {
+    filter: brightness(90%) saturate(150%);
+}
+
+.card img.dark:hover {
+    filter: initial;
+}
 
 /* simple transitions */
 
@@ -166,4 +174,8 @@ img.dark {
 
 .fader:hover {
     filter: brightness(90%);
+}
+
+.shadow-text {
+    text-shadow: 0 2px 8px black;
 }
