@@ -50,9 +50,9 @@ block content
                                     iframe.full-width(height="400px" src=project.youtubeUrl)
 
 
-                            .gallery-action
-                                a.btn-floating.btn-large.waves-effect.waves-light(href=project.projectUrl, target="_blank")
-                                    i.material-icons forward
+                            //- .gallery-action
+                                a.btn-floating.btn-large.waves-effect.waves-light.red.modal-close(href="javascript:returnToOriginal()")
+                                    i.material-icons close
 
             else
                 p.col.s12.center There are no projects.
