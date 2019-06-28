@@ -125,3 +125,17 @@ section > h3,
 section > p {
 	color: #2196f3 !important;
 }
+
+
+.rainbow-blue-text {
+	color: #2196f3;
+}
+
+.rainbow-pink-text {
+	color: #e44988;
+}
+
+.dropdown-content li > a.rainbow-blue-text, .dropdown-content li > span.rainbow-blue-text {
+	color: #2196f3;
+
+}
