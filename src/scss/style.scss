@@ -148,3 +148,9 @@ section > p {
 	color: #2196f3;
 
 }
+  
+.bg-image {
+    /* Add the blur effect */
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+  }
