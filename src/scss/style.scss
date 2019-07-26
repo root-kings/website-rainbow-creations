@@ -154,3 +154,10 @@ section > p {
     filter: blur(4px);
     -webkit-filter: blur(4px);
   }
+
+
+
+  span.card-title.shadow-text.center.full-width{
+	  font-size: 2rem;
+	  text-shadow: 0 2px 4px #000000 ;
+  }
