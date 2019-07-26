@@ -43,7 +43,7 @@ var ProjectSchema = new Schema({
 	type: {
 		type: String,
 		max: 100,
-		enum: ['wall-art', 'canvas-painting', 'illustration', 'drawing', 'gift']
+		enum: ['wall-art', 'canvas-painting', 'illustration', 'line-art', 'gift']
 	},
 	images: [
 		{
