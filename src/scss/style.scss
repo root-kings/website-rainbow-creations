@@ -125,3 +125,32 @@ section > h3,
 section > p {
 	color: #2196f3 !important;
 }
+
+
+.rainbow-blue-text {
+	color: #2196f3;
+}
+
+.rainbow-pink-text {
+	color: #e44988;
+}
+
+
+.rainbow-blue {
+	background-color: #2196f3;
+}
+
+.rainbow-pink {
+	background-color: #e44988;
+}
+
+.dropdown-content li > a.rainbow-blue-text, .dropdown-content li > span.rainbow-blue-text {
+	color: #2196f3;
+
+}
+  
+.bg-image {
+    /* Add the blur effect */
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+  }
