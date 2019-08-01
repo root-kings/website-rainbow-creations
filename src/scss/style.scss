@@ -126,7 +126,6 @@ section > p {
 	color: #2196f3 !important;
 }
 
-
 .rainbow-blue-text {
 	color: #2196f3;
 }
@@ -134,7 +133,6 @@ section > p {
 .rainbow-pink-text {
 	color: #e44988;
 }
-
 
 .rainbow-blue {
 	background-color: #2196f3;
@@ -144,25 +142,37 @@ section > p {
 	background-color: #e44988;
 }
 
-.dropdown-content li > a.rainbow-blue-text, .dropdown-content li > span.rainbow-blue-text {
+.dropdown-content li > a.rainbow-blue-text,
+.dropdown-content li > span.rainbow-blue-text {
 	color: #2196f3;
-
 }
-  
+
 .bg-image {
-    /* Add the blur effect */
-    filter: blur(4px);
-    -webkit-filter: blur(4px);
-  }
+	/* Add the blur effect */
+	filter: blur(4px);
+	-webkit-filter: blur(4px);
+}
 
+span.card-title.shadow-text.center.full-width {
+	font-size: 2rem;
+	text-shadow: 0 2px 4px #000000;
+}
 
+.sidenav li > a.rainbow-blue-text {
+	color: #2196f3;
+}
 
-  span.card-title.shadow-text.center.full-width{
-	  font-size: 2rem;
-	  text-shadow: 0 2px 4px #000000 ;
-  }
+.artwork-images-item {
+	// height: 400px;
+	// overflow: hidden;
+	.bordered-sassy{
+		// height: 400px;
+	
 
-
-  .sidenav li > a.rainbow-blue-text {
-	  color: #2196f3;
-  }
+	img {
+		// min-height: 400px;
+		width: 100%;
+		//   overflow: hidden;
+	}
+}
+}

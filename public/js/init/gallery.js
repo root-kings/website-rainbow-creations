@@ -53,23 +53,23 @@
 
 
         // Home
-        $('.carousel:not(.carousel-slider)').carousel({
-            dist: 0,
-            padding: 10
-        });
-        $('.carousel.carousel-slider').carousel({
-            fullWidth: true,
-            indicators: true,
-            onCycleTo: function (el) {
-                $('.nav-background img').removeClass('active');
-                $('.nav-background img').eq(el.index()).addClass('active');
-            }
-        });
+        // $('.carousel:not(.carousel-slider)').carousel({
+        //     dist: 0,
+        //     padding: 10
+        // });
+        // $('.carousel.carousel-slider').carousel({
+        //     fullWidth: true,
+        //     indicators: true,
+        //     onCycleTo: function (el) {
+        //         $('.nav-background img').removeClass('active');
+        //         $('.nav-background img').eq(el.index()).addClass('active');
+        //     }
+        // });
 
 
         // Masonry Grid
-        var $masonry = $('.gallery');
-        $masonry.masonry({
+        var $masonryArtwork = $('.gallery');
+        $masonryArtwork.masonry({
             // set itemSelector so .grid-sizer is not used in layout
             itemSelector: '.gallery-item',
             // use element for option
@@ -78,9 +78,24 @@
             transitionDuration: 0
         });
         // layout Masonry after each image loads
-        $masonry.imagesLoaded(function () {
-            $masonry.masonry('layout');
+        $masonryArtwork.imagesLoaded(function () {
+            $masonryArtwork.masonry('layout');
         });
+
+        // var $masonryImages = $('.images-wrapper');
+        // $masonryImages.masonry({
+        //     // set itemSelector so .grid-sizer is not used in layout
+        //     itemSelector: '.artwork-images-item',
+        //     // use element for option
+        //     columnWidth: '.artwork-images-item',
+        //     // no transitions
+        //     transitionDuration: 0
+        // });
+        // // layout Masonry after each image loads
+        // $masonryImages.imagesLoaded(function () {
+        //     $masonryImages.masonry('layout');
+        // });
+
         $('a.filter').click(function (e) {
             e.preventDefault();
         });

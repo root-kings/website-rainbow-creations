@@ -11,5 +11,6 @@
     border: 1px solid black;
     border-radius: 4px;
     box-sizing: border-box;
+    overflow: hidden;
     /* overflow: hidden; */
 }
