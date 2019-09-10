@@ -586,6 +586,11 @@
           }
         });
 
+        $('a.modal-close').click(function(e) {
+            if (overlayActive) {
+              returnToOriginal();
+            }
+        });
 
         // This function returns the modaled image to the original spot
         function returnToOriginal() {
