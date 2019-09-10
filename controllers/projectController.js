@@ -16,10 +16,16 @@ exports.project_list = function(req, res) {
 			throw err
 		}
 
+		let artworktype = req.params.type.split('-').join(' ')
+		
+		if (req.params.type == 'gift') artworktype = 'personalized gift'
+
+		if (req.params.type != 'wall-art') artworktype += 's'
+
 		console.log(list_projects)
 		//Successful, so render
 		res.render('artwork', {
-			artworktype: req.params.type.split('-').join(' '),
+			artworktype,
 			projects: list_projects
 		})
 		//res.send(list_projects);
