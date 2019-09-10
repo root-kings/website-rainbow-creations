@@ -165,14 +165,17 @@ span.card-title.shadow-text.center.full-width {
 .artwork-images-item {
 	// height: 400px;
 	// overflow: hidden;
-	.bordered-sassy{
+	.bordered-sassy {
 		// height: 400px;
-	
 
-	img {
-		// min-height: 400px;
-		width: 100%;
-		//   overflow: hidden;
+		img {
+			// min-height: 400px;
+			width: 100%;
+			//   overflow: hidden;
+		}
 	}
 }
+
+.italic-text {
+	font-style: italic;
 }
