@@ -17,7 +17,7 @@ router.get('/contact', (req, res) => {
 
 router.post('/contact', (req, res) => {
 	// console.log(req.body)
-	
+
 	let contactinfo = req.body
 	let email = {
 		to: 'mailing.rainbowcreations@gmail.com',
@@ -40,7 +40,8 @@ router.get('/dashboard', (req, res) => {
 })
 
 router.get('/login', (req, res) => {
-	res.render('login')
+	if ((req.session.loggedIn == 'rainbow')) return res.redirect('dashboard')
+	return res.render('login')
 })
 
 router.post('/login', (req, res) => {
