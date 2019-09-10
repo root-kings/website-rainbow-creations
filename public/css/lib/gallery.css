@@ -14,3 +14,13 @@
     overflow: hidden;
     /* overflow: hidden; */
 }
+nav .brand-logo img {
+	max-height: 48px;
+}
+nav,
+nav .nav-wrapper i,
+nav a.sidenav-trigger,
+nav a.sidenav-trigger i {
+	height: 48px;
+	line-height: 48px;
+}
