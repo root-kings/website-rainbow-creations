@@ -7,34 +7,6 @@ router.get('/', (req, res) => {
 	res.render('index')
 })
 
-router.get('/splash', (req, res) => {
-	res.render('splash')
-})
-
-router.get('/products', (req, res) => {
-	res.render('products')
-})
-
-router.get('/services', (req, res) => {
-	res.render('services')
-})
-
-// router.get('/portfolio', (req, res) => {
-// 	res.render('portfolio')
-// })
-
-// router.get('/artwork', (req, res) => {
-// 	res.render('artwork')
-// })
-
-router.get('/events', (req, res) => {
-	res.render('events')
-})
-
-router.get('/testimonials', (req, res) => {
-	res.render('testimonials')
-})
-
 router.get('/press', (req, res) => {
 	res.render('press')
 })

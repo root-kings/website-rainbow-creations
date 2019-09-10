@@ -9,21 +9,7 @@ block content
         .row
             .col.s12.m9
                 .collection
-                    //- each project in projects
-                    //-     a.collection-item.avatar(href='javascript:populate("'+project.id+'")')
-                    //-         img.circle(src='/project/image/'+project.id, alt=project.name)
-                    //-         //- img.circle.materialboxed(src='/images/xxx.jpg', alt=project.name)
-                    //-         span.title.strong.grey-text.text-darken-2 #{project.name}
-                    //-         p.black-text #{project.description}
-                    //-         //- p.blue-text.text-lighten-1 Rs #{project.cost}
-
-
-
-                    //- else
-                        p.center There are no projects.
-
-
-
+                   
                     
                     a.collection-item.avatar(v-for="project in projects" @click='javascript:populate(project._id)')
                         img.circle(:src="project.images[0]", :alt="project.name")
@@ -50,19 +36,19 @@ block content
                 h4#modal-heading.center Edit
                 form#project-form(v-on:submit.prevent="onSubmit")
                     .row
-                        .input-field.col.s6
+                        .input-field.col.s12
                             input#project-name(type='text', v-model="selectedProject.name", name='project_name')
                             label(for='project-name') Project Name
 
-                        .input-field.col.s6
+                        //- .input-field.col.s6
                             input#project-owner(type='text', v-model="selectedProject.owner", name='project_owner')
                             label(for='project-owner') Owner
 
-                        .input-field.col.s6
+                        //- .input-field.col.s6
                             input#project-cost(type='text', v-model="selectedProject.cost", name='project_cost')
                             label(for='project-cost') Cost
 
-                        .input-field.col.s6
+                        //- .input-field.col.s6
                             input#project-date(type='text', v-model="selectedProject.date", name='project_date')
                             label(for='project-cost') Date
 
@@ -74,7 +60,7 @@ block content
                             input#project-categories(type='text', name='project_categories')
                             label(for='project-categories') Category
 
-                        .input-field.col.s6
+                        //- .input-field.col.s6
                             //- i.material-icons.prefix link
                             input#project-url(type='text', name='project_url', v-model="selectedProject.projectUrl",)
                             label(for='project-url') Project Link
@@ -132,59 +118,3 @@ block scripts
     script(src="/js/lib/vue.js")
     script(src="/js/init/edit-projects.js")
 
-
-
-
-
-//- extends components/layout.pug
-
-//- block styles
-
-//- block content
-//-     section.container
-//-         h3.light.brown-text.center Dashboard
-
-//-         .row
-//-             //- .col.s9
-//-             .col.s12
-
-//-                 h4.light#projects Projects
-//-                 .collection
-//-                     a.collection-item(href="#!") Project
-//-                     a.collection-item(href="#!") Project
-//-                     a.collection-item(href="#!") Project
-//-                     a.collection-item(href="#!") Project
-
-
-
-                
-//-                 h4.light#products Products
-//-                 .collection
-//-                     a.collection-item(href="#!") Product
-//-                     a.collection-item(href="#!") Product
-//-                     a.collection-item(href="#!") Product
-//-                     a.collection-item(href="#!") Product
-
-
-
-                
-//-                 h4.light#events Events
-//-                 .collection
-//-                     a.collection-item(href="#!") Event
-//-                     a.collection-item(href="#!") Event
-//-                     a.collection-item(href="#!") Event
-//-                     a.collection-item(href="#!") Event
-
-
-//-             //- .col.s3
-//-                 h4.light#events Menu
-//-                 .collection
-//-                     a.collection-item(href="#projects") Projects
-//-                     a.collection-item(href="#products") Products
-//-                     a.collection-item(href="#events") Events
-
-        
-
-
-//- block scripts
-    
