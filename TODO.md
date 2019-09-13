@@ -29,7 +29,7 @@
 * [x] details of projects.
 * [x] Name, name of owner, date, place, description, images
 
-~~### Events~~
+### ~~Events~~
 
 * [ ] ~~Workshops~~
 * [ ] ~~Personalized tutorials~~
