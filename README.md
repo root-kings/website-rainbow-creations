@@ -21,35 +21,4 @@ Start development server with `yarn dev`.
 
 Build the assets by running `gulp`.
 
-## To Do
 
-### Offerings
-
-[x] Personalized gifts
-[x] Mural
-[x] Canvas portraits
-[x] Canvas Landscape
-[x] Stands
-[x] Line Art
-
-### Portfolio
-
-[x] details of projects.
-[x] Name, name of owner, date, place, description, images
-
-### Events
-
-[-] Workshops
-[-] Personalized tutorials
-[-] Trainings
-[-] Certification exams
-
-### About us
-
-[x] Testimonials
-
-### Contact
-
-[x] social info
-
-### Attributions
