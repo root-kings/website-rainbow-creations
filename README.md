@@ -30,7 +30,7 @@ Build the assets by running `gulp`.
 [x] Canvas portraits
 [x] Canvas Landscape
 [x] Stands
-[x] Line drawings
+[x] Line Art
 
 ### Portfolio
 
