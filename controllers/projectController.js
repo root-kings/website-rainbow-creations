@@ -20,7 +20,7 @@ exports.project_list = function(req, res) {
 		
 		if (req.params.type == 'gift') artworktype = 'personalized gift'
 
-		if (req.params.type != 'wall-art' || req.params.type != 'line-art' ) artworktype += 's'
+		if (artworktype != 'wall art' && artworktype != 'line art' ) artworktype += 's'
 
 		console.log(list_projects)
 		//Successful, so render
