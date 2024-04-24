@@ -47,3 +47,4 @@ app.listen(PORT, err => {
 	}
 	console.info('Listening on port ' + PORT + '...')
 })
+modeule.exports = app
