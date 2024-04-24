@@ -6,7 +6,7 @@ block styles
 mixin newsItem(newstitle, publisher, file)
     .row
         .col.s12
-            a(href=file)
+            a(href=file, target="_blank")
                 .card-panel.hoverable
                     h4.light.brown-text= newstitle
                     h5= publisher
