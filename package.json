@@ -10,6 +10,10 @@
     "start": "node index.js",
     "dev": "concurrently --kill-others \"gulp dev\" \"nodemon -r dotenv/config index.js\""
   },
+  "engines": {
+    "node": "=12.0.0",
+    "npm": "=6.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/root-kings/website-rainbow-creations.git"
