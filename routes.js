@@ -1,7 +1,7 @@
 let router = require('express').Router()
 
-const sgMail = require('@sendgrid/mail')
-sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+// const sgMail = require('@sendgrid/mail')
+// sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 router.get('/', (req, res) => {
 	res.render('index')
@@ -30,7 +30,7 @@ router.post('/contact', (req, res) => {
 					<br>Phone: ${contactinfo.phone} </p>`
 	}
 
-	sgMail.send(email)
+	// sgMail.send(email)
 	res.render('contact', { submitted: true })
 })
 
